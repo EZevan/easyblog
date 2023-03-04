@@ -1,4 +1,3 @@
-* [简介](md/introduction.md)
 * dotnet
   * [C# - Type.IsAssignableFrom用法](md/Type.IsAssignableFrom用法.md)
   * [C# - 实现浅拷贝和深拷贝](md/实现浅拷贝和深拷贝.md)

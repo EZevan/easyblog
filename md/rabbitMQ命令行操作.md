@@ -1,4 +1,4 @@
-# rabbitMQ 命令行队列操作
+# <center>rabbitMQ 命令行队列操作</center>
 
 1. 创建队列
 ```

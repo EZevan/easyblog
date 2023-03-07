@@ -1,4 +1,4 @@
-# Linux快速安装python3.8（踩坑指南）
+# <center>Linux快速安装python3.8（踩坑指南）</center>
 
 > 安装环境：centos7.5  
 > 安装版本：python3.8.5  

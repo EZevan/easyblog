@@ -1,4 +1,4 @@
-# Mac终端添加ll，la，l快捷命令
+# <center>Mac终端添加ll，la，l快捷命令</center>
 **Step 1**  
 打开终端，打开.bash_profile配置文件
 ```

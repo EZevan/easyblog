@@ -1,4 +1,4 @@
-# Windows系统下Redis启动与状态查看
+# <center>Windows系统下Redis启动与状态查看</center>
 
 * 查看 Redis服务是否启动  
 

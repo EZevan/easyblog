@@ -1,4 +1,4 @@
-# MySql8 修改root用户密码   
+# <center>MySql8 修改root用户密码</center>   
 > 背景：  
 1  忘记mysql root用户登录连接密码
 2  MySql8移除了password密码加密函数

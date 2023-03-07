@@ -1,4 +1,4 @@
-# C# - PropertyInfo.GetValue方法
+# <center>C# - PropertyInfo.GetValue方法</center>
 > 命名空间: System.Reflection   
 > 程序集: System.Runtime.dll   
 > 官方定义: 返回指定对象的属性值   

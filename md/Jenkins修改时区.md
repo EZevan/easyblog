@@ -1,4 +1,4 @@
-# Jenkins修改时区   
+# <center>Jenkins修改时区</center>   
 
 1. 访问http://jenkins_url/systemInfo,查看user.timezone变量值   
 

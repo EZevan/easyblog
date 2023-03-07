@@ -1,4 +1,4 @@
-# Kafka查看 topic消费情况
+# <center>Kafka查看 topic消费情况</center>
 
 1. 查询消费数据，必须要指定组
 ```c

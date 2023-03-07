@@ -1,4 +1,4 @@
-# Markdown代码块高亮语法
+# <center>Markdown代码块高亮语法</center>
 
 **使用方法**
 

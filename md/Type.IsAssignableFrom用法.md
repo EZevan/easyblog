@@ -1,4 +1,4 @@
-# C# Type.IsAssignableFrom(Type type)
+# <center>C# Type.IsAssignableFrom(Type type)</center>
 
 > 官方解释：Determine whether an instance of current Type can be assigned from an instance of the specified type.   
 判断指定类型实例是否可以分配给当前类型的实例

@@ -1,4 +1,4 @@
-# CentOS 7安装MySQL8.x  
+# <center>CentOS 7安装MySQL8.x</center>  
 
 1. 删除旧版本mysql
 ```py

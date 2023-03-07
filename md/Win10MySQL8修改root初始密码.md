@@ -1,4 +1,4 @@
-# Win10 MySQL8 修改root初始密码  
+# <center>Win10 MySQL8 修改root初始密码</center>  
 
 1. 使用管理员方式打开cmd，cd至mysql安装bin目录下  
 ```

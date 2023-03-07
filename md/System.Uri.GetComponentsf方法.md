@@ -1,4 +1,4 @@
-# C# - System.Uri.GetComponents()
+# <center>C# - System.Uri.GetComponents()</center>
 > Gets the specified components of the current instance using specified escaping for special characters.   
 > 使用特殊字符的指定转义，获取当前实例的指定部分
 

@@ -1,4 +1,4 @@
-# Jenkins生成HTML报告部分无法显示问题
+# <center>Jenkins生成HTML报告部分无法显示问题</center>
 jenkins 配置使用html publisher查看jmeter html报告时，发现显示不全，很多东西显示不了。
  
 项目配置：  

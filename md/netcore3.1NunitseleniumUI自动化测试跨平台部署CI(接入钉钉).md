@@ -1,4 +1,4 @@
-# netcore3.1 + Nunit + selenium UI自动化测试跨平台部署CI（接入钉钉)
+# <center>netcore3.1 + Nunit + selenium UI自动化测试跨平台部署CI（接入钉钉)</center>
 
 1. 准备
 * .netcore3.1+NUnit+selenium UI自动化测试框架 - Swat

@@ -1,4 +1,4 @@
-# Linux环境快速安装Jmeter  
+# <center>inux环境快速安装Jmeter</center>  
 
 1 检查是否安装java环境
 

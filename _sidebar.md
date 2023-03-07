@@ -12,11 +12,12 @@
   * [自动化 - 浅谈UI自动化](md/自动化浅谈UI自动化.md)
 * devops
   * [rabbitMQ命令行操作](md/rabbitMQ命令行操作.md)
+  * [Markdown代码块高亮语法](md/Markdown代码块高亮语法.md)
   * [MySql8修改root用户密码](md/MySql8修改root用户密码.md)
   * [配置SSH连接多个git服务器](md/配置SSH连接多个git服务器.md)
   * [CentOS 7安装MySQL8.x](md/CentOS7安装MySQL8.x.md)
   * [Linux环境快速安装Jenkins](md/Linux环境快速安装Jenkins.md)
-  * [Markdown代码块高亮语法](md/Markdown代码块高亮语法.md)
+  * [Linux 后台运行任务](md/Linux后台运行任务.md)
   * [Linux快速安装python3.8](md/Linux快速安装python3.8.md)
   * [Linux环境快速安装Jmeter](md/Linux环境快速安装Jmeter.md)
   * [Jenkins快速配置Jmeter接口自动化并输出报告](md/Jenkins快速配置Jmeter接口自动化并输出报告.md)

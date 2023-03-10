@@ -31,3 +31,4 @@
   * [Python解析Jmeter接口自动化脚本文件(.jtl文件)](md/Python解析Jmeter接口自动化脚本文件(jtl文件).md)
   * [Win10 MySQL8 修改root初始密码](md/Win10MySQL8修改root初始密码.md)
   * [Windows系统下Redis启动与状态查看](md/Windows系统下Redis启动与状态查看.md)
+  * [IntelliJ配置Python虚拟环境](md/IntelliJ配置Python虚拟环境.md)

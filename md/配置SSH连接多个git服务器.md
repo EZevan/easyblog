@@ -2,24 +2,25 @@
 
 1. 创建个人SSH key  
 ```shell
-#查看本机是否存在ssh key
+// 查看本机是否存在ssh key
 
-#macOS/linux：
+// macOS/linux：
 cd ~/.ssh
 ls
 
-#Windows:
+// Windows:
 cd "C:\Users\yourUsername\.ssh"
 
-#新建SSH key(以macOS为例)：  
+// 新建SSH key(以macOS为例)：  
 cd ~/.ssh       
 ssh-keygen -t rsa -C "youremail@example.com"
 
-#设置名称，如：id_rsa_gitlab 
+// 设置名称，如：id_rsa_gitlab 
 Enter file in which to save the key (/Users/evanzhang/.ssh/id_rsa): id_rsa_gitlab
 
-#输入密码（个人机器工作环境的话建议可以无需密码，否则每次进行git提交，拉取操作都会要求校验密码；直接回车即可）
+// 输入密码（个人机器工作环境的话建议可以无需密码，否则每次进行git提交，拉取操作都会要求校验密码；直接回车即可）
 Enter passphrase (empty for no passphrase):
+
 ```
 
 2. 添加并配置config文件   

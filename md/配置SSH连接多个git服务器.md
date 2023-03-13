@@ -4,10 +4,9 @@
 ```shell
 #查看本机是否存在ssh key
 
- macOS/linux：
+#macOS/linux：
 cd ~/.ssh
 ls
-
 #Windows:
 cd "C:\Users\yourUsername\.ssh"
 

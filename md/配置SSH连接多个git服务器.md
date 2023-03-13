@@ -29,9 +29,9 @@
 
 ```shell
 #Host 服务器别名
-Host git.taimei.com
+Host git.tmxx.com
 #HostName 服务器ip地址或机器名
-HostName git.taimei.com
+HostName git.tmxx.com
 #User连接服务器的用户名
 User wenqiang.zhang
 PreferredAuthentications publickey
@@ -51,7 +51,7 @@ IdentityFile ~/.ssh/id_rsa
 4. 测试
 ```shell
 #使用 ssh -T git@Host进行测试，其中Host指上面配置的服务器别名
-ssh -T git@git.taimei.com
+ssh -T git@git.tmxx.com
 ssh -T git@github.com
 ```
 

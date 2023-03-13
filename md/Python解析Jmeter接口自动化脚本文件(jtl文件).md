@@ -4,8 +4,8 @@
 ```
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
 1593337383673,16,BeanShell Sampler - Empty downloads folder,200,OK,setUp Thread Group 1-1,text,true,,4,0,1,1,null,0,0,0
-1593337383885,1358,POST - /sso/sso/doLogin,200,OK,setUp Thread Group 1-1,text,true,,458,675,1,1,https://www.trialos.com/api/sso-web/sso/sso/doLogin,1355,0,1013
-1593337385315,180009,POST - /sso/sso/selectEnvironment,504,Gateway Time-out,setUp Thread Group 1-1,text,false,Expected to find an object with property ['success'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'.,740,770,1,1,https://www.trialos.com/api/sso-web/sso/sso/selectEnvironment,180009,0,0
+1593337383885,1358,POST - /sso/sso/doLogin,200,OK,setUp Thread Group 1-1,text,true,,458,675,1,1,https://www.xxxxos.com/api/sso-web/sso/sso/doLogin,1355,0,1013
+1593337385315,180009,POST - /sso/sso/selectEnvironment,504,Gateway Time-out,setUp Thread Group 1-1,text,false,Expected to find an object with property ['success'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'.,740,770,1,1,https://www.xxxxos.com/api/sso-web/sso/sso/selectEnvironment,180009,0,0
 ```
 * 由17个属性构成：timeStamp，elapsed，label，responseCode等
 * 每一个接口结果信息占一行（超出部分换行显示）

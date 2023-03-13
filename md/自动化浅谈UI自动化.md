@@ -1,4 +1,4 @@
-## <center>自动化 - 浅谈UI自动化</center>
+## <center>自动化 - 浅谈UI自动化
 
 > UI自动化的价值  
 

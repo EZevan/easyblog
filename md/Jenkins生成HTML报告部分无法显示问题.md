@@ -1,4 +1,4 @@
-# <center>Jenkins生成HTML报告部分无法显示问题</center>
+# <center>Jenkins生成HTML报告部分无法显示问题
 jenkins 配置使用html publisher查看jmeter html报告时，发现显示不全，很多东西显示不了。
  
 项目配置：  
@@ -35,8 +35,9 @@ System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
 4 配置job - 构建触发器：启用Build when job nodes start，Quiet period属性填0即可  
 5 配置job - 增加构建步骤：Execute Groovy script  
 6 在Execute Groovy script中填写如下命令即可：
- ```cs
-System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
- ```
+
+    ```shell
+    System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
+    ```
  其中，Groovy Version选择“全局工具配置”中的Groovy名称即可。
  

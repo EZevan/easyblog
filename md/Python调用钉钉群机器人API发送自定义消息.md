@@ -1,4 +1,4 @@
-# <center>Python调用钉钉群机器人API发送自定义消息</center> 
+# <center>Python调用钉钉群机器人API发送自定义消息
 
 > 背景：  
 > 1 Jenkins构建Jmeter接口自动化脚本，自动将报错接口信息自动发送至钉钉群；  
@@ -13,32 +13,33 @@ https://ding-doc.dingtalk.com/doc#/serverapi3/iydd5h
 支持text，link，markdown等多种消息类型，这里以markdown为例进行简单介绍   
 
 2 简单易用的python脚本  
-```python
-#coding=utf-8
 
-import json
-import requests
-import sys
+    ```python
+    #coding=utf-8
 
-def sendMsg(url,file):
-    errorMsg = getErrorMsg(file)
-    headers = {'Content-Type': 'application/json;charset=utf-8'}
-    data = {
-        "msgtype": "markdown",
-        "markdown": {
-            "title": "测试",
-            "text": "#### trial-api-test \n> " + errorMsg + " \n> ### [问题连接](https://www.dingtalk.com) \n",
-        },
-        "at": {
-            "atMobiles":[]，
-            "isAtAll": False
+    import json
+    import requests
+    import sys
+
+    def sendMsg(url,file):
+        errorMsg = getErrorMsg(file)
+        headers = {'Content-Type': 'application/json;charset=utf-8'}
+        data = {
+            "msgtype": "markdown",
+            "markdown": {
+                "title": "测试",
+                "text": "#### trial-api-test \n> " + errorMsg + " \n> ### [问题连接](https://www.dingtalk.com) \n",
+            },
+            "at": {
+                "atMobiles":[]，
+                "isAtAll": False
+            }
         }
-    }
 
-    if len(errorMsg) > 0:
-        response = requests.post(url,data = json.dumps(data),headers=headers,verify=False)
-    return response.text
-```
+        if len(errorMsg) > 0:
+            response = requests.post(url,data = json.dumps(data),headers=headers,verify=False)
+        return response.text
+    ```
 
 注释：  
 * errorMsg：通过getErrorMsg(file)方法获取jmeter自动化接口执行结果文件（.jtl文件）中所有报错接口的错误信息

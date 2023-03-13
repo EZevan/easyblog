@@ -10,59 +10,61 @@
 * 将测试项目从安装依赖，构建到执行测试放在docker容器中运行；然后jenkins将测试报告和日志归档，构建完成后自动发送消息至钉钉群
 
 3. 准备Dockerfile
-```python
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
 
-ENV DEBIAN_FRONTEND noninteractive
+   ```python
+   FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
 
-# Install Chrome
-RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
-&& sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
-&& sed -i s@/security.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
-&& apt-get clean \
-&& apt-get update && apt-get install -y \
-apt-transport-https \
-ca-certificates \
-curl \
-gnupg \
-hicolor-icon-theme \
-libcanberra-gtk* \
-libgl1-mesa-dri \
-libgl1-mesa-glx \
-libpango1.0-0 \
-libpulse0 \
-libv4l-0 \
-fonts-symbola \
---no-install-recommends \
-&& curl -sSL https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
-&& echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list \
-&& apt-get update && apt-get install -y \
-google-chrome-stable \
---no-install-recommends \
-&& apt-get purge --auto-remove -y curl \
-&& rm -rf /var/lib/apt/lists/*
+   ENV DEBIAN_FRONTEND noninteractive
 
-# install chinese fonts
-RUN apt-get update \
-&& apt-get -y install ttf-wqy-microhei ttf-wqy-zenhei \
-&& apt-get clean
+   # Install Chrome
+   RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
+   && sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
+   && sed -i s@/security.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
+   && apt-get clean \
+   && apt-get update && apt-get install -y \
+   apt-transport-https \
+   ca-certificates \
+   curl \
+   gnupg \
+   hicolor-icon-theme \
+   libcanberra-gtk* \
+   libgl1-mesa-dri \
+   libgl1-mesa-glx \
+   libpango1.0-0 \
+   libpulse0 \
+   libv4l-0 \
+   fonts-symbola \
+   --no-install-recommends \
+   && curl -sSL https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
+   && echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list \
+   && apt-get update && apt-get install -y \
+   google-chrome-stable \
+   --no-install-recommends \
+   && apt-get purge --auto-remove -y curl \
+   && rm -rf /var/lib/apt/lists/*
 
-# copy full solution over  and restore package
-# define the following working directory,so that the screenshot will be displayed properly in the jenkins report.
-COPY . /app
-WORKDIR /app
-RUN dotnet restore \
-&& dotnet build
+   # install chinese fonts
+   RUN apt-get update \
+   && apt-get -y install ttf-wqy-microhei ttf-wqy-zenhei \
+   && apt-get clean
 
-WORKDIR /app/Swat.Test/bin/Debug/netcoreapp3.1
-RUN ls -a
+   # copy full solution over  and restore package
+   # define the following working directory,so that the screenshot will be displayed properly in the jenkins report.
+   COPY . /app
+   WORKDIR /app
+   RUN dotnet restore \
+   && dotnet build
 
-FROM builder AS testRunner
-WORKDIR /job/trial-ui-auto-test/report
-COPY --from=builder /app .
-WORKDIR /job/trial-ui-auto-test/report/Swat.Test/
-ENTRYPOINT  ["dotnet", "test", "--logger:trx"]
-```
+   WORKDIR /app/Swat.Test/bin/Debug/netcoreapp3.1
+   RUN ls -a
+
+   FROM builder AS testRunner
+   WORKDIR /job/trial-ui-auto-test/report
+   COPY --from=builder /app .
+   WORKDIR /job/trial-ui-auto-test/report/Swat.Test/
+   ENTRYPOINT  ["dotnet", "test", "--logger:trx"]
+   ```
+
 脚本解释：  
 > 1. FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder 表示将dotnetcore3.1作为基础镜像
 > 2. ENV DEBIAN_FRONTEND noninteractive 由于在更新apt-get命令相关依赖时，会涉及的选择时区，会终端自动化执行命令，该命令表示设置一个DEBIAN_FRONTEND变量，不使用交互模式
@@ -86,21 +88,23 @@ ENTRYPOINT  ["dotnet", "test", "--logger:trx"]
     执行dotnet test，启动自动化测试   
 
 4. jenkins构建docker
-```
-cd ${WORKSPACE}
 
-# Remove the last executed docker container and image
-sudo docker rm $(sudo docker ps -a | awk '/trial.ui.autotest/{print $1}')
-sudo docker rmi $(sudo docker images | awk '/trial.ui.autotest/{print $3}')
+   ```
+   cd ${WORKSPACE}
 
-# Copy the docker file to current directory
-sudo cp ${JENKINS_HOME}/scripts/Dockerfile .
+   # Remove the last executed docker container and image
+   sudo docker rm $(sudo docker ps -a | awk '/trial.ui.autotest/{print $1}')
+   sudo docker rmi $(sudo docker images | awk '/trial.ui.autotest/{print $3}')
 
-# Run the docker
-sudo docker build -t trial.ui.autotest:latest .
-sudo docker run --name trial.ui.autotest_container trial.ui.autotest
-sudo mkdir -p ./log && sudo docker cp trial.ui.autotest_container:/job/trial-ui-auto-test/report/Swat.Test ./log
-```
+   # Copy the docker file to current directory
+   sudo cp ${JENKINS_HOME}/scripts/Dockerfile .
+
+   # Run the docker
+   sudo docker build -t trial.ui.autotest:latest .
+   sudo docker run --name trial.ui.autotest_container trial.ui.autotest
+   sudo mkdir -p ./log && sudo docker cp trial.ui.autotest_container:/job/trial-ui-auto-test/report/Swat.Test ./log
+   ```
+   
 命令解释：   
 sudo docker build -t trial.ui.autotest:latest . 构建镜像   
 sudo docker run --name trial.ui.autotest_container trial.ui.autotest 运行docker容器，容器名称：trial.ui.autotest_container   

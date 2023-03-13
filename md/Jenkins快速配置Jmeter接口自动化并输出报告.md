@@ -1,4 +1,4 @@
-# <center>Jenkins快速配置Jmeter接口自动话并输出报告</center>   
+# <center>Jenkins快速配置Jmeter接口自动话并输出报告
 
 1 jenkins安装插件
 * Performance Plugin：基于Jmeter脚本执行结果，跟踪各项性能KPI指标  
@@ -7,9 +7,10 @@
 2 配置执行jmeter的job  
 * 在构建环境下启用：Delete workspace before build starts
 * 新增构建步骤：执行Windows批处理命令（linux下选择执行shell命令即可）
-```vim
-"D:\Program Files\apach-jmeter-5.3\bin\jmeter" -n -t "D:\Program File\apache-jmeter-5.3\test script\api\trial_api_test.jmx" -l apireport.jtl -e -o report
-```
+
+    ```vim
+    "D:\Program Files\apach-jmeter-5.3\bin\jmeter" -n -t "D:\Program File\apache-jmeter-5.3\test script\api\trial_api_test.jmx" -l apireport.jtl -e -o report
+    ```
 命令释义：  
 "D:\Program Files\apach-jmeter-5.3\bin\jmeter"   
 表示调用机器上安装的jmeter（这里以Windows系统为例，使用双引号是因为路径格式问题；linux格式相同，使用不同的目录即可）

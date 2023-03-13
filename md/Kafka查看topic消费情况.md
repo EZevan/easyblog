@@ -1,15 +1,16 @@
-# <center>Kafka查看 topic消费情况</center>
+# <center>Kafka查看 topic消费情况
 
 1. 查询消费数据，必须要指定组
-```c
-cd /opt/kafka/bin/
 
-# 查找topic组
-./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+    ```c
+    cd /opt/kafka/bin/
 
-# 查看etrial组
-./kafka-consumer-groups.sh --describe --bootstrap-server localhost:9092 --group etrial
-```
+    # 查找topic组
+    ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+
+    # 查看etrial组
+    ./kafka-consumer-groups.sh --describe --bootstrap-server localhost:9092 --group etrial
+    ```
 2. 查询消费情况
 
 |TOPIC|PARTITION|CURRENT-OFFSET|LOG-END-OFFSET|LAG|CONSUMER-ID|HOST|CLIENT-ID|

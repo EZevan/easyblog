@@ -1,14 +1,14 @@
-# <center>Markdown代码块高亮语法</center>
+# <center>Markdown代码块高亮语法
 
 **使用方法**
 
-```
-(```key)
-some codes
-(```)
+    ```
+    (```key)
+    some codes
+    (```)
 
-注：使用小括号是为了防止转义，实际是没有的
-```
+    注：使用小括号是为了防止转义，实际是没有的
+    ```
 支持的语言
 language|key
 :-:|:-:

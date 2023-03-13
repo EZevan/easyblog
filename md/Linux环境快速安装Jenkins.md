@@ -1,4 +1,5 @@
-# <center>Linux环境快速安装Jenkins</center>
+# <center>Linux环境快速安装Jenkins
+
 * Prerequisite   
 1. 获取安装列表  
 

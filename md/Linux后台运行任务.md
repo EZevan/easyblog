@@ -5,10 +5,11 @@
 `&` 是指后台运行任务，但当用户推出、挂起（hangup）的时候，任务也跟着退出。
 
 * 于是，可以结合 `nohup` 和 `&`在后台永久运行某个任务/命令
-```shell
-# 推荐示例
-nohup python test.py > out.log 2>&1 &
-```
+
+    ```shell
+    # 推荐示例
+    nohup python test.py > out.log 2>&1 &
+    ```
 
 **参数说明**   
 

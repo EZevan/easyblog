@@ -1,4 +1,4 @@
-# <center>python/django/vue问题记录</center>
+# <center>python/django/vue问题记录
 
 1. python继承的三种用法
 2. uuid.uuid1, uuid4用法

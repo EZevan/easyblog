@@ -1,4 +1,4 @@
-# <center>配置SSH连接多个git服务器</center>  
+# <center>配置SSH连接多个git服务器 
 
 1. 创建个人SSH key  
 

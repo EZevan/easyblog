@@ -1,4 +1,4 @@
-#  <center>Linux 后台运行任务</center>
+#  <center> Linux 后台运行任务
 
 * 先了解下 nohup 和 & 两者的区别  
 `nohup` 运行命令可以使命令永久执行下去，和用户终端无关，即使用户断开ssh连接也不会影响；注：nohup 没有后台运行的功能。   

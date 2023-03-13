@@ -7,6 +7,7 @@
 #macOS/linux：
 cd ~/.ssh
 ls
+
 #Windows:
 cd "C:\Users\yourUsername\.ssh"
 
@@ -23,6 +24,7 @@ Enter passphrase (empty for no passphrase):
 
 2. 添加并配置config文件   
 *注：若~/.ssh/目录下不存在config文件，则新建一个，内容如下：*   
+
 ```shell
 #Host 服务器别名
 Host git.taimei.com

@@ -1,7 +1,7 @@
 # <center>配置SSH连接多个git服务器</center>  
 
 1. 创建个人SSH key  
-```c
+```shell
 # 查看本机是否存在ssh key
 
 # macOS/linux：
@@ -24,7 +24,7 @@ Enter passphrase (empty for no passphrase):
 
 2. 添加并配置config文件   
 *注：若~/.ssh/目录下不存在config文件，则新建一个，内容如下：*   
-```C
+```shell
 # Host 服务器别名
 Host git.taimei.com
 # HostName 服务器ip地址或机器名
@@ -58,7 +58,7 @@ ssh -T git@github.com
 
 解决：
 将ssh私钥添加到ssh agent中
-```C
+```shell
 ssh-add ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa_gitlab
 

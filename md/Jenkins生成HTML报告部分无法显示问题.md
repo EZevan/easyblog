@@ -2,14 +2,14 @@
 jenkins 配置使用html publisher查看jmeter html报告时，发现显示不全，很多东西显示不了。
  
 项目配置：  
-![project configuration](https://images2015.cnblogs.com/blog/1137906/201706/1137906-20170629174314024-370481986.png)
+![project configuration](../assets/img/Jenkins%E7%94%9F%E6%88%90HTML%E6%8A%A5%E5%91%8A%E9%83%A8%E5%88%86%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/jenkins-01.jpg)
  
 查看html报告异常（很多资源无法加载）：  
-![htlm report](https://images2015.cnblogs.com/blog/1137906/201706/1137906-20170629174335039-1865257201.png)
+![htlm report](../assets/img/Jenkins%E7%94%9F%E6%88%90HTML%E6%8A%A5%E5%91%8A%E9%83%A8%E5%88%86%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/jenkins-02.jpg)
  
 
 控制台查看加载日志（与安全机制有关）：   
-![report console](https://images2015.cnblogs.com/blog/1137906/201706/1137906-20170629174347946-939041682.png)
+![report console](../assets/img/Jenkins%E7%94%9F%E6%88%90HTML%E6%8A%A5%E5%91%8A%E9%83%A8%E5%88%86%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/jenkins-03.jpg)
 
 
 在查看官方文档后，这原来是安全问题所导致的。
@@ -25,7 +25,7 @@ Jenkins安全默认是将以下功能都关闭了
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
  
 如下图：  
-![script command line](https://images2015.cnblogs.com/blog/1137906/201706/1137906-20170629174408196-1563995370.png)
+![script command line](../assets/img/Jenkins%E7%94%9F%E6%88%90HTML%E6%8A%A5%E5%91%8A%E9%83%A8%E5%88%86%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/jenkins-04.jpg)
 
 * 注：上述的解决方案只能是临时的，即当jenkins实例重启后，又需要重新执行该脚本；为了彻底解决该问题，可以新建一个job专门用来执行该脚本，触发时机为当jenkins实例启动时。
 

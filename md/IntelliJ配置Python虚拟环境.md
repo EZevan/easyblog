@@ -4,7 +4,7 @@
 
 ## 安装Python插件   
 打开IntelliJ IDEA，进入`File - Settings - Plugins`，搜索插件`Python`，点击安装即可
-![IntelliJ-01](../assets/img/IntelliJ-01.png "")
+![IntelliJ-01](../assets/img/IntelliJ%E9%85%8D%E7%BD%AEPython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/IntelliJ-01.png "")
 
 ## 配置虚拟环境  
 1. 安装`virtualenv` 
@@ -22,8 +22,8 @@ virtualenv .venv
 ```
 4. 配置项目依赖的环境为虚拟环境
 进入`File - Project Structure..`，或者快捷键`ctrl+alt+shift+s`打开项目结构配置下的`SDKS`，配置项目依赖的环境为刚刚创建的虚拟环境
-![IntelliJ-02](../assets/img/IntelliJ-02.png "")
-![IntelliJ-03](../assets/img/IntelliJ-03.png "")
+![IntelliJ-02](../assets/img/IntelliJ%E9%85%8D%E7%BD%AEPython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/IntelliJ-02.png "")
+![IntelliJ-03](../assets/img/IntelliJ%E9%85%8D%E7%BD%AEPython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/IntelliJ-03.png "")
 5. 激活虚拟环境
 ```shell
 # windows

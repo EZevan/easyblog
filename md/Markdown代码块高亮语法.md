@@ -9,10 +9,12 @@
 
     注：使用小括号是为了防止转义，实际是没有的
     ```
+
 支持的语言
-language|key
-:-:|:-:
-1C | 1c
+
+| language | key  |
+| :----: | :----: |
+1C | 1c 
 ActionScript | actionscript
 Apache | apache
 AppleScript | applescript
@@ -127,3 +129,5 @@ Intel x86 Assembly | x86asm
 XL | xl
 XML | xml
 YAML | yml
+
+

@@ -2,13 +2,13 @@
 
 1 检查是否安装java环境
 
-    ```
+    ```bash
     java -version
     ```
 
 2 创建jmeter目录,进入该目录
 
-    ```vim
+    ```bash
     mkdir /usr/local/jmeter
     cd /usr/local/jmeter
     ```
@@ -17,7 +17,7 @@
 
 * 科学上网：直接下载安装 
 
-    ```yml
+    ```bash
     wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.3.tgz
     ```
 
@@ -25,13 +25,13 @@
 
 4 解压
 
-    ```
+    ```bash
     tar -zxvf apache-jmeter-5.3.tgz
     ```
 
 5 配置环境变量
 
-    ```vim
+    ```bash
     vim /etc/profile
 
     在文件最后添加
@@ -42,13 +42,13 @@
 
 6 配置生效
 
-    ```vim
+    ```bash
     source /etc/profile
     ```
 
 7 检查是否安装成功
 
-    ```
+    ```bash
     jmeter -v
     ```
 
@@ -56,7 +56,7 @@
 * Linux下使用非GUI方式启动运行jmeter脚本参考另一边博文
 * MacOS下可以使用GUI方式启动jmeter，命令如下：
 
-    ```vim
+    ```bash
     cd /usr/local/jmeter/apache-jmeter-5.1.1/bin/
 
     sh jmeter

@@ -6,14 +6,14 @@
 1. python依赖包安装  
 **注：在安装过程中会校验python所有依赖，如果缺失会安装失败，相对于指定某些必要依赖的安装方式，最好是直接安装所有依赖的开发工具包**
 
-    ```c
+    ```bash
     yum -y groupinstall "Development Tools"
     ```
 
 2. 下载python安装包  
 方式1：科学上网   
 
-    ```c
+    ```bash
     wget https://www.python.org/ftp/python/3.8.0/Python-3.8.5.tgz 
     ```
 
@@ -22,13 +22,13 @@ https://www.python.org/ftp/python/3.8.0/Python-3.8.5.tgz
 
 3. 解压 
 
-    ```
+    ```bash
     tar tar -zxvf Python-3.8.5.tgz
     ```
 
 4. 安装
 
-    ```c
+    ```bash
     cd Python-3.8.5
     ./configure --prefix=/usr/local/python3
     make && make install
@@ -36,7 +36,7 @@ https://www.python.org/ftp/python/3.8.0/Python-3.8.5.tgz
 
 **注意：如果没有root权限，上述安装可能会不成功，改成如下命令即可**
 
-    ```c
+    ```bash
     cd Python-3.8.5
     sudo ./configure --prefix=/usr/local/python3
     sudo make
@@ -45,14 +45,14 @@ https://www.python.org/ftp/python/3.8.0/Python-3.8.5.tgz
 
 5. 建立软链接
 
-    ```
+    ```bash
     ln -s /usr/local/python3/bin/python3.8 /usr/bin/python3
     ln -s /usr/local/python3/bin/pip3.8 /usr/bin/pip3
     ```
 
 6. 设置环境变量
 
-    ```shell
+    ```bash
     macOS：
     vim ~/.bash_profile
     linux：
@@ -77,12 +77,12 @@ https://www.python.org/ftp/python/3.8.0/Python-3.8.5.tgz
     ```
 以阿里云为例：
 
-    ```
+    ```bash
     pip install web.py -i http://mirrors.aliyun.com/pypi/simple/
     ```
 
 **注：如果报错提示不支持http协议，可以换成其他https源或者使用如下命令**
 
-    ```
+    ```bash
     pip install web.py -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
     ```

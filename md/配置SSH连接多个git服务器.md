@@ -2,7 +2,7 @@
 
 1. 创建个人SSH key  
 
-    ```shell
+    ```bash
     # 查看本机是否存在ssh key
 
     # macOS/linux：
@@ -27,7 +27,7 @@
 2. 添加并配置config文件   
 *注：若~/.ssh/目录下不存在config文件，则新建一个，内容如下：*   
 
-    ```shell
+    ```bash
     #Host 服务器别名
     Host git.tmxx.com
     #HostName 服务器ip地址或机器名
@@ -50,7 +50,7 @@
 
 4. 测试
 
-    ```shell
+    ```bash
     #使用 ssh -T git@Host进行测试，其中Host指上面配置的服务器别名
     ssh -T git@git.tmxx.com
     ssh -T git@github.com
@@ -63,7 +63,7 @@
 解决：
 将ssh私钥添加到ssh agent中
 
-    ```shell
+    ```bash
     ssh-add ~/.ssh/id_rsa
     ssh-add ~/.ssh/id_rsa_gitlab
 

@@ -5,7 +5,7 @@
 
 * 可以用来判断指定类型是否继承了当前类  
 
-    ```C#
+    ```java
     public class Car
     {
         public void Run()
@@ -37,7 +37,7 @@
 
 * 可以用来判断匿名类型是否继承了当前类
 
-    ```C#
+    ```java
     static void Main(string[] args)
     {
 
@@ -52,7 +52,7 @@
     ```
 * 可以用来判断匿名类型是否为当前类
 
-    ```c#
+    ```java
     static void Main(string[] args)
     {
         var carType = typeof(Car);

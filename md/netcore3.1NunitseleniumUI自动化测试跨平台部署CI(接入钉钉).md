@@ -11,7 +11,7 @@
 
 3. 准备Dockerfile
 
-   ```python
+   ```bash
    FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
 
    ENV DEBIAN_FRONTEND noninteractive
@@ -89,7 +89,7 @@
 
 4. jenkins构建docker
 
-   ```
+   ```bash
    cd ${WORKSPACE}
 
    # Remove the last executed docker container and image

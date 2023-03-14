@@ -9,7 +9,7 @@
 **较低版本的MySql中，如5.7及一下；修改root用户密码方法如下**
 1. 通过修改/etc/my.cnf文件设置跳过验证
 
-    ```C
+    ```bash
     vim /etc/my.cnf
     # 在[mysql]后添加skip-grant-tables
     # 重启服务
@@ -18,7 +18,7 @@
 
 2. mysql -uroot -p 免密直接进入mysql库，修改user表密码  
 
-    ```
+    ```bash
     mysql -uroot -p
     use mysql
 
@@ -30,7 +30,7 @@
 
 1. 通过修改/etc/my.cnf文件设置跳过验证
 
-    ```C
+    ```bash
     vim /etc/my.cnf
     # 在[mysql]后添加skip-grant-tables
     # 重启服务
@@ -39,7 +39,7 @@
 
 2. mysql -uroot -p 免密直接进入mysql库，修改root用户密码
 
-    ```python
+    ```bash
     mysql -uroot -p
     use mysql
     # 修改root用户密码为空
@@ -73,7 +73,7 @@
 
 3. 修改root用户密码
 
-    ```
+    ```bash
     # 将/etc/my.cnf还原
     # 使用ALTER修改root用户密码（由于已经root密码设置为空，故无需密码即可访问mysql）
     mysql -uroot -p

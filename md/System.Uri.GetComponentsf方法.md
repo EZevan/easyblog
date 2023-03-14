@@ -2,7 +2,7 @@
 > Gets the specified components of the current instance using specified escaping for special characters.   
 > 使用特殊字符的指定转义，获取当前实例的指定部分
 
-    ```C#
+    ```java
     public string GetComponents (UriComponents components, UriFormat format);
     ```
 
@@ -16,7 +16,7 @@
 
 **用法示例: 展示UriComponents各个部分的值**
 
-    ```C#
+    ```java
     var uri = new Uri("https://evan.zhang@www.sologolo.com:8088/subject/index?id=123456");
 
     var components = enum.GetValues(typeof(UriComponents));
@@ -47,7 +47,7 @@
 
 **用法示例：使用“|”按位或运算符拼接组件**
 
-    ```C#
+    ```java
     var uri = new Uri("https://evan.zhang@www.sologolo.com/subject/index?id=123456");
 
     var uriString = uri.GetComponents(UriComponents.SchemeAndServer | UriComponents.UserInfo,UriFormat.Unescaped)

@@ -2,7 +2,7 @@
 
 1 分析.jtl文件结构  
 
-    ```
+    ```json
     timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
     1593337383673,16,BeanShell Sampler - Empty downloads folder,200,OK,setUp Thread Group 1-1,text,true,,4,0,1,1,null,0,0,0
     1593337383885,1358,POST - /sso/sso/doLogin,200,OK,setUp Thread Group 1-1,text,true,,458,675,1,1,https://www.xxxxos.com/api/sso-web/sso/sso/doLogin,1355,0,1013
@@ -57,6 +57,6 @@
 
 注：requests模块需要pip手动安装
 
-    ```
+    ```bash
     pip install requests
     ```

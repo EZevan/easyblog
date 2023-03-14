@@ -2,7 +2,7 @@
 
 1. 删除旧版本mysql
 
-    ```py
+    ```bash
     # 查看是否已经安装过旧版本 
     rpm -qa | grep mysql
 
@@ -34,7 +34,7 @@
 2. 安装MySQL  
 > 注：centos的yum 源中默认是没有mysql的，所以我们需要先去官网下载mysql的repo源并安装；mysql官网下载链接：mysql repo下载地址 如下：https://dev.mysql.com/downloads/repo/yum/  
 
-    ```py
+    ```bash
     # 使用任意版本的rpm包均可，如：mysql80-community-release-el7-3.noarch.rpm
 
     # 下载
@@ -46,26 +46,26 @@
 
 3. 更新yum命令（相关依赖）
 
-    ```
+    ```bash
     yum clean all
     yum makecache
     ```
 
 4. 安装MySQL
 
-    ```py
+    ```bash
     yum install mysql-community-server -y
     ```
 
 5. 开启MySQL服务
 
-    ```
+    ```bash
     systemctl start msqld.service
     ```
 
 6. 初始化
 
-    ```py
+    ```bash
     #mysql在安装后会创建一个root@localhost账户，并且把初始的密码放到了/var/log/mysqld.log文件中
 
     cat /var/log/mysqld.log | grep password
@@ -79,7 +79,7 @@
 
 7. 防火墙开放3306端口
 
-    ```py
+    ```bash
     # 查看所有已开放的端口
     firewall-cmd --zone=public --list-ports
 
@@ -98,14 +98,14 @@
 
 8. 将MySQL添加到开机启动项,并启动
 
-    ```
+    ```bash
     systemctl enable mysqld.service
     systemctl start mysqld.service
     ```
 
 9. 开启远程访问权限
 
-    ```
+    ```bash
     # 命令行访问进入mysql，修改user表中root用户的host为『%』
     mysql -u root -p
     use mysql

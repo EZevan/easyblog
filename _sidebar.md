@@ -32,3 +32,4 @@
   * [Win10 MySQL8 修改root初始密码](md/Win10MySQL8修改root初始密码.md)
   * [Windows系统下Redis启动与状态查看](md/Windows系统下Redis启动与状态查看.md)
   * [IntelliJ配置Python虚拟环境](md/IntelliJ配置Python虚拟环境.md)
+  * [解决ThisrequesthasbeenblockedthecontentmustbeservedoverHTTPS](md/%E8%A7%A3%E5%86%B3This%20request%20has%20been%20blocked%3B%20the%20content%20must%20be%20served%20over%20HTTPS.md)

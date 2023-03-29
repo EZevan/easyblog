@@ -15,31 +15,31 @@
 
 2 python解析执行失败的接口
 
-    ```python
-    #coding=utf-8
+```python
+#coding=utf-8
 
-    import json
-    import requests
-    import sys
+import json
+import requests
+import sys
 
-    def getErrorMsg(file):
-        sampleList = []
-        contentArray = []
+def getErrorMsg(file):
+    sampleList = []
+    contentArray = []
 
-        fileContent = open(file,"r")
-        for line in fileContent:
-            if line[0:13].isdigit:
-                line = line[14:]
-                sampleList.append(line)
-        print(sampleList)
+    fileContent = open(file,"r")
+    for line in fileContent:
+        if line[0:13].isdigit:
+            line = line[14:]
+            sampleList.append(line)
+    print(sampleList)
 
-        for sample in sampleList:
-            contentArray = sample.split(",")
-            if contentArray[6] == "false":
-                errorMsg += "> Label: " + contentArray[1] + "  \n> ResponseCode: " + contentArray[2] + "  \n> ResponseMsg: " + contentArray[3] + "  \n> FailureMsg: " + contentArray[7] + "\n\n\n> "
+    for sample in sampleList:
+        contentArray = sample.split(",")
+        if contentArray[6] == "false":
+            errorMsg += "> Label: " + contentArray[1] + "  \n> ResponseCode: " + contentArray[2] + "  \n> ResponseMsg: " + contentArray[3] + "  \n> FailureMsg: " + contentArray[7] + "\n\n\n> "
 
-        return errorMsg
-    ```
+    return errorMsg
+```
 
 注释：
 

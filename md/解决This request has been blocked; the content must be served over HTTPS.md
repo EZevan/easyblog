@@ -6,13 +6,13 @@ This request has been blocked; the content must be served over HTTPS
 ## 方法1：  
 在 html 文件头中添加
 
-    ```css
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-    ```
+```css
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+```
 
 ## 方法2：  
 在 nginx 的 server 模块添加
 
-    ```bash
-    add_header Content-Security-Policy "upgrade-insecure-requests;connect-src *";
-    ```
+```bash
+add_header Content-Security-Policy "upgrade-insecure-requests;connect-src *";
+```

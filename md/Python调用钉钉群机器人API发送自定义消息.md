@@ -14,32 +14,32 @@ https://ding-doc.dingtalk.com/doc#/serverapi3/iydd5h
 
 2 简单易用的python脚本  
 
-    ```python
-    #coding=utf-8
+```python
+#coding=utf-8
 
-    import json
-    import requests
-    import sys
+import json
+import requests
+import sys
 
-    def sendMsg(url,file):
-        errorMsg = getErrorMsg(file)
-        headers = {'Content-Type': 'application/json;charset=utf-8'}
-        data = {
-            "msgtype": "markdown",
-            "markdown": {
-                "title": "测试",
-                "text": "#### trial-api-test \n> " + errorMsg + " \n> ### [问题连接](https://www.dingtalk.com) \n",
-            },
-            "at": {
-                "atMobiles":[]，
-                "isAtAll": False
-            }
+def sendMsg(url,file):
+    errorMsg = getErrorMsg(file)
+    headers = {'Content-Type': 'application/json;charset=utf-8'}
+    data = {
+        "msgtype": "markdown",
+        "markdown": {
+            "title": "测试",
+            "text": "#### trial-api-test \n> " + errorMsg + " \n> ### [问题连接](https://www.dingtalk.com) \n",
+        },
+        "at": {
+            "atMobiles":[]，
+            "isAtAll": False
         }
+    }
 
-        if len(errorMsg) > 0:
-            response = requests.post(url,data = json.dumps(data),headers=headers,verify=False)
-        return response.text
-    ```
+    if len(errorMsg) > 0:
+        response = requests.post(url,data = json.dumps(data),headers=headers,verify=False)
+    return response.text
+```
 
 注释：  
 * errorMsg：通过getErrorMsg(file)方法获取jmeter自动化接口执行结果文件（.jtl文件）中所有报错接口的错误信息

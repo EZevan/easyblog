@@ -5,62 +5,62 @@
 
 * 可以用来判断指定类型是否继承了当前类  
 
-    ```java
-    public class Car
+```java
+public class Car
+{
+    public void Run()
     {
-        public void Run()
-        {
-            Console.Writeline("Running...");
-        }
+        Console.Writeline("Running...");
     }
+}
 
-    public class Audi : Car
-    {
-        
-    }
+public class Audi : Car
+{
+    
+}
 
-    public class Bmw
-    {
+public class Bmw
+{
 
-    }
+}
 
-    static void Main(string[] args)
-    {
-        var carType = typeof(Car);
-        var audiType = typeof(Audi);
-        var bmwType = typeof(Bmw);
+static void Main(string[] args)
+{
+    var carType = typeof(Car);
+    var audiType = typeof(Audi);
+    var bmwType = typeof(Bmw);
 
-        Console.Writeline($"Audi is drived from Car? {carType.IsAssignableFrom(audiType)}");  // true;
-        Console.Writeline($"Bmw is drived from Car? {carTyep.IsAssignableFrom(bmwType)}")   // false;
-    }
-    ```
+    Console.Writeline($"Audi is drived from Car? {carType.IsAssignableFrom(audiType)}");  // true;
+    Console.Writeline($"Bmw is drived from Car? {carTyep.IsAssignableFrom(bmwType)}")   // false;
+}
+```
 
 * 可以用来判断匿名类型是否继承了当前类
 
-    ```java
-    static void Main(string[] args)
+```java
+static void Main(string[] args)
+{
+
+    Console.Writeline($"Audi is drived from Car? {Check(typeof(Audi))}");   // true;
+    Console.Writeline($"Bmw is drived from Car? {Check(typeof(Bmw))}");    // false;
+
+    private bool Check<T>(T t)
     {
-
-        Console.Writeline($"Audi is drived from Car? {Check(typeof(Audi))}");   // true;
-        Console.Writeline($"Bmw is drived from Car? {Check(typeof(Bmw))}");    // false;
-
-        private bool Check<T>(T t)
-        {
-            return typeof(Car).IsAssignableFrom(t.GetType());
-        }
+        return typeof(Car).IsAssignableFrom(t.GetType());
     }
-    ```
+}
+```
 * 可以用来判断匿名类型是否为当前类
 
-    ```java
-    static void Main(string[] args)
-    {
-        var carType = typeof(Car);
-        var audiType = typeof(Audi);
-        var bmwType = typeof(Bmw);
+```java
+static void Main(string[] args)
+{
+    var carType = typeof(Car);
+    var audiType = typeof(Audi);
+    var bmwType = typeof(Bmw);
 
-        Console.Writeline(carType.IsAssignableFrom(carType));   // true;
-        Console.Writeline(audiType.IsAssignableFrom(audiType)); // true;
-        Console.Writeline(bmwTupe.IsAssignableFrom(bmwTupe));   // true;
-    }
-    ```
+    Console.Writeline(carType.IsAssignableFrom(carType));   // true;
+    Console.Writeline(audiType.IsAssignableFrom(audiType)); // true;
+    Console.Writeline(bmwTupe.IsAssignableFrom(bmwTupe));   // true;
+}
+```

@@ -8,9 +8,9 @@
 * 在构建环境下启用：Delete workspace before build starts
 * 新增构建步骤：执行Windows批处理命令（linux下选择执行shell命令即可）
 
-    ```vim
-    "D:\Program Files\apach-jmeter-5.3\bin\jmeter" -n -t "D:\Program File\apache-jmeter-5.3\test script\api\trial_api_test.jmx" -l apireport.jtl -e -o report
-    ```
+```bash
+"D:\Program Files\apach-jmeter-5.3\bin\jmeter" -n -t "D:\Program File\apache-jmeter-5.3\test script\api\trial_api_test.jmx" -l apireport.jtl -e -o report
+```
 命令释义：  
 "D:\Program Files\apach-jmeter-5.3\bin\jmeter"   
 表示调用机器上安装的jmeter（这里以Windows系统为例，使用双引号是因为路径格式问题；linux格式相同，使用不同的目录即可）

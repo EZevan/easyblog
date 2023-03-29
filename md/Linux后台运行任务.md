@@ -6,10 +6,10 @@
 
 * 于是，可以结合 `nohup` 和 `&`在后台永久运行某个任务/命令
 
-    ```shell
-    # 推荐示例
-    nohup python test.py > out.log 2>&1 &
-    ```
+```shell
+# 推荐示例
+nohup python test.py > out.log 2>&1 &
+```
 
 **参数说明**   
 

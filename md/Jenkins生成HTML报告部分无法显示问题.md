@@ -36,8 +36,8 @@ System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
 5 配置job - 增加构建步骤：Execute Groovy script  
 6 在Execute Groovy script中填写如下命令即可：
 
-    ```shell
-    System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
-    ```
+```bash
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
+```
  其中，Groovy Version选择“全局工具配置”中的Groovy名称即可。
  

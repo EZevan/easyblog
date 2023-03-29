@@ -4,42 +4,42 @@
 
 1. 使用 telnet 命令查看 ip 端口是否可连接
 
-    ```bash
-    telnet 127.0.0.1 6379
-    # 若提示无法连接到主机则表示 redis 服务未启动
-    ```
+```bash
+telnet 127.0.0.1 6379
+# 若提示无法连接到主机则表示 redis 服务未启动
+```
 
 2. 使用 redis-cli 命令查看是否可连接 redis
 
-    ```bash
-    # 进入 Redis 安装目录后输入如下命令
-    redis-cli
+```bash
+# 进入 Redis 安装目录后输入如下命令
+redis-cli
 
-    # 如果提示无法连接则表示 redis 服务未启动
-    ```
+# 如果提示无法连接则表示 redis 服务未启动
+```
 
 * 手动启动 Redis 服务
 
-    ```bash
-    # 进入 Redis 安装目录后，输入
-    redis-server redis.windows.conf
-    ```
+```bash
+# 进入 Redis 安装目录后，输入
+redis-server redis.windows.conf
+```
 
 * 将 Redis 服务创建为 Windows 服务开机启动
 
-    ```bash
-    # 进入 Redis 安装目录后，输入：
-    redis-server --service-install redis.windows.conf
-    # 执行完成后打开 Windows 服务即可看到新创建的 Redis 服务
-    ```
+```bash
+# 进入 Redis 安装目录后，输入：
+redis-server --service-install redis.windows.conf
+# 执行完成后打开 Windows 服务即可看到新创建的 Redis 服务
+```
 
 * 查看 Redis 最大连接数以及当前连接用户数
 
-    ```bash
-    # redis-cli连接到 redis 后
-    # 查看连接池设置的最大连接数：
-    config get maxclients
+```bash
+# redis-cli连接到 redis 后
+# 查看连接池设置的最大连接数：
+config get maxclients
 
-    # 查看当前连接用户数
-    info clients
-    ```
+# 查看当前连接用户数
+info clients
+```

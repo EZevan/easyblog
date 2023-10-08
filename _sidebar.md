@@ -20,6 +20,7 @@
   * [MySql8修改root用户密码](md/MySql8修改root用户密码.md)
   * [配置SSH连接多个git服务器](md/配置SSH连接多个git服务器.md)
   * [CentOS 7安装MySQL8.x](md/CentOS7安装MySQL8.x.md)
+  * [CentOS 7安装python11+openssl](md/CentOS7安装python11+openssl.md)
   * [Linux环境快速安装Jenkins](md/Linux环境快速安装Jenkins.md)
   * [Linux 后台运行任务](md/Linux后台运行任务.md)
   * [Linux快速安装python3.8](md/Linux快速安装python3.8.md)

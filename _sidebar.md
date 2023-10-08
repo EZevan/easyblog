@@ -7,7 +7,9 @@
 * python
   * [python/django/vue问题记录](md/pythondjangovue问题记录.md)
   * [Python类属性使用可变关键字参数并用于构造函数](md/Python类属性使用可变关键字参数并用于构造函数.md)
+  * [Python 理解可变位置参数中的"*"的作用](md/Python%20理解可变位置参数中的"*"的作用.md)
   * [Fastapi全局Response中间件](md/Fastapi全局Response中间件.md)
+  * [Python-搭建私有pypi仓库](md/Python-搭建私有pypi仓库.md)
 * 测试
   * [如何理解责任心](md/如何理解责任心.md)
   * [测试质量体系建设](md/测试质量体系建设.md)

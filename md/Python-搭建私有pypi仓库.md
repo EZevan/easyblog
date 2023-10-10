@@ -33,7 +33,7 @@ pypi-server run -p 8080 -P . -a . /pypiserver/packages --fallback-url https://mi
 
 ```bash
 # 配置poetry私有仓库地址
-poetry config repositories.private-pypi http://ip:8080
+poetry config repositories.private-pypi http://host:8080
 
 # 打包并发布到私有仓库 private-pypi
 poetry publish -r private-pypi
@@ -42,14 +42,14 @@ poetry publish -r private-pypi
 
 ### 浏览器查看镜像仓库
 
-* 访问 http://ip:8080/simple/ 即可看到私有仓库中上传成功的包
+* 访问 http://host:8080/simple/ 即可看到私有仓库中上传成功的包
 
 ### 从私有仓库安装 python 包
 
 ```bash
 # 因为没有启用 https，所以需要加上 --trusted-host ip
-pip install -i http://ip:8080/simple/ 包名 --trusted-host ip
+pip install -i http://host:8080/simple/ 包名 --trusted-host ip
 
 # 例如：
-pip install -i http://192.168.70.13:8080/simple/ domore-api --trusted-host 192.168.70.13
+pip install -i http://testhub.taimei.com/simple/ domore-api --trusted-host testhub.taimei.com
 ```

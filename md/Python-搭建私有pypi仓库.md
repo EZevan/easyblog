@@ -51,5 +51,5 @@ poetry publish -r private-pypi
 pip install -i http://host:8080/simple/ 包名 --trusted-host ip
 
 # 例如：
-pip install -i http://testhub.taimei.com/simple/ domore-api --trusted-host testhub.taimei.com
+pip install -i http://testhub.taimei.com/pypi/simple domore-api --trusted-host testhub.taimei.com
 ```

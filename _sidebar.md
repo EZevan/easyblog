@@ -10,6 +10,8 @@
   * [Python 理解可变位置参数中的"*"的作用](md/Python%20理解可变位置参数中的"*"的作用.md)
   * [Fastapi全局Response中间件](md/Fastapi全局Response中间件.md)
   * [Python-搭建私有pypi仓库](md/Python-搭建私有pypi仓库.md)
+  * [Python-switch case 用法](md/Python-switch%20case%20用法.md)
+  * [Python-递归方式找出某个目录下指定后缀文件的上层目录名](md/Python-递归方式找出某个目录下指定后缀文件的上层目录名.md)
 * 测试
   * [如何理解责任心](md/如何理解责任心.md)
   * [测试质量体系建设](md/测试质量体系建设.md)

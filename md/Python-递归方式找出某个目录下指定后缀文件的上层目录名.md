@@ -40,9 +40,6 @@
 ```python
 import os
 
-# 声明一个字典，用于存储环境和应用名
-env_app = {}
-
 # 递归方法实现
 
 def get_app_names(path: str, app_names_out: dict)
@@ -53,3 +50,25 @@ def get_app_names(path: str, app_names_out: dict)
 """
 # 声明一个列表，用于存储应用名
 app_names = []
+
+for file in os.listdir():
+    if os.path.isdir(file): 
+        get_app_names(os.path.join(path, file), app_names_out)
+    else:
+        if file.endwith(".har"):
+            cur_dir = os.path.dirname(os.path.abspath(os.path.join(path, file)))
+            cur_dir_name = os.path.basename(cur_dir)
+            parent_dir_name = os.path.basename(os.path.dirname(cur_dir))
+            app_names.append((parent_dir_name, cur_dir_name))
+    
+    for k, v in app_names:
+        app_names_out.setdefault(k, []).append(v)
+return app_names_out
+```
+
+## 示例
+
+上述路径中的目录结构，调用`get_app_names`方法后即可返回如下字典：
+```json
+{"test": ["app1","app2","app3"],"uat": ["app1","app2"]}
+```

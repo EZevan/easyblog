@@ -32,6 +32,7 @@
   * [Jenkins快速配置Jmeter接口自动化并输出报告](md/Jenkins快速配置Jmeter接口自动化并输出报告.md)
   * [Jenkins生成HTML报告部分无法显示问题](md/Jenkins生成HTML报告部分无法显示问题.md)
   * [Mac终端添加ll，la，l快捷命令](md/Mac终端添加lllal快捷命令.md)
+  * [Dockerfile中无法修改hosts](md/Dockerfile中无法修改hosts.md)
   * [docker容器镜像常用操作命令](md/docker容器镜像常用操作命令.md)
   * [Jenkins修改时区](md/Jenkins修改时区.md)
   * [Kafka查看topic消费情况](md/Kafka查看topic消费情况.md)

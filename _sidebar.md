@@ -10,6 +10,7 @@
   * [python/django/vue问题记录](md/pythondjangovue问题记录.md)
   * [Python类属性使用可变关键字参数并用于构造函数](md/Python类属性使用可变关键字参数并用于构造函数.md)
   * [Python 理解可变位置参数中的"*"的作用](md/Python理解可变位置参数中的星号的作用.md)
+  * [Python-typing使用](md/Python-typing使用.md)
   * [Python-typing中泛型使用](md/Python-typing中泛型使用.md)
   * [Python-搭建私有pypi仓库](md/Python-搭建私有pypi仓库.md)
   * [Python-switch case 用法](md/Python-switch%20case%20用法.md)

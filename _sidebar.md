@@ -15,6 +15,7 @@
   * [Python-搭建私有pypi仓库](md/Python-搭建私有pypi仓库.md)
   * [Python-switch case 用法](md/Python-switch%20case%20用法.md)
   * [Python-递归方式找出某个目录下指定后缀文件的上层目录名](md/Python-递归方式找出某个目录下指定后缀文件的上层目录名.md)
+  * [Python-在fastapi的中间件中获取request body会阻塞应用程序](md/Python-在fastapi的中间件中获取requestbody会阻塞应用程序.md)
   * [sqlalchemy配置ORM模型基类](md/sqlalchemy配置ORM模型基类.md)
   * [sqlalchemy设置字段默认值 default/insert_fault/server_default 区别](md/sqlalchemy设置字段默认值default,insert_fault,server_default区别.md)
 * 测试

@@ -23,6 +23,7 @@
   * [如何理解责任心](md/如何理解责任心.md)
   * [测试质量体系建设](md/测试质量体系建设.md)
   * [自动化 - 浅谈UI自动化](md/自动化浅谈UI自动化.md)
+  * [Jmeter Awsome Report工具快速使用](md/JmeterAwsomeReport.md)
 * devops
   * [rabbitMQ命令行操作](md/rabbitMQ命令行操作.md)
   * [Markdown代码块高亮语法](md/Markdown代码块高亮语法.md)

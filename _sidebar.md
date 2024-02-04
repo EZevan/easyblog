@@ -25,6 +25,7 @@
   * [自动化 - 浅谈UI自动化](md/自动化浅谈UI自动化.md)
   * [Jmeter Awsome Report工具快速使用](md/JmeterAwsomeReport.md)
 * devops
+  * [Git同时提交代码到多个仓库](md/Git同时提交代码到多个仓库.md)
   * [rabbitMQ命令行操作](md/rabbitMQ命令行操作.md)
   * [Markdown代码块高亮语法](md/Markdown代码块高亮语法.md)
   * [MySql8修改root用户密码](md/MySql8修改root用户密码.md)

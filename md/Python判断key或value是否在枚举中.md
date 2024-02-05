@@ -22,11 +22,11 @@
 如：有如下枚举类
 
 ```python
-from enum import Enum
-class EnumDemo(Enum):
-    RED_COLOR = 'red'
-    BLUE_COLOR = 'blue'
-    GREEN_COLOR = 'green'
+    from enum import Enum
+    class EnumDemo(Enum):
+        RED_COLOR = 'red'
+        BLUE_COLOR = 'blue'
+        GREEN_COLOR = 'green'
 ```
 1. 获取枚举类的字段名
     - `EnumDemo.__members__.keys()`
@@ -43,13 +43,13 @@ class EnumDemo(Enum):
 ## 判断key或value是否在枚举中(某个指定值是否在枚举类中)
 
     ```python
-    from enum import Enum
-    class testEnum(Enum):
-        KEY1 = 0
-        KEY2 = "yes"
+        from enum import Enum
+        class testEnum(Enum):
+            KEY1 = 0
+            KEY2 = "yes"
 
-    "key1" in testEnum.__members__
-    0 in testEnum._value2member_map_
+        "key1" in testEnum.__members__
+        0 in testEnum._value2member_map_
     ```
 
 1. 判断key是否在枚举类中
@@ -58,5 +58,13 @@ class EnumDemo(Enum):
 2. 判断value是否在枚举类中
     - `0 in testEnum._value2member_map_`
     - `'yes' in testEnum._value2member_map_`
+
+- `testEnum._value2member_map_` 是Enum子类的dict属性，将值映射到成员类的一个字典，其中 key 是枚举类的值，value 是枚举类的字段名
+
+    ```
+        print(testEnum._value2member_map_)
+
+        输出：{0: <testEnum.KEY1: 0>, 'yes': <testEnum.KEY2: 'yes'>}
+    ```
 
 

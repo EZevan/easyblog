@@ -7,6 +7,7 @@
 * python
   * [alembic通过配置env.py实现异步迁移](md/alembic通过配置env.py实现异步迁移.md)
   * [Fastapi全局Response中间件](md/Fastapi全局Response中间件.md)
+  * [Fastapi使用OAuth2+JWT在swagger中接口请求头的token是undefined](md/Fastapi使用OAuth2+JWT在swagger中接口请求头的token是undefined.md)
   * [pydantic配置ModelConfig实现接口返回schema驼峰别名](md/pydantic配置ModelConfig实现接口返回schema驼峰别名.md)
   * [python/django/vue问题记录](md/pythondjangovue问题记录.md)
   * [Python类属性使用可变关键字参数并用于构造函数](md/Python类属性使用可变关键字参数并用于构造函数.md)

@@ -541,19 +541,19 @@
 
 1.  运行fastapi入口程序并访问文档： http://127.0.0.1:8000/docs， 可以看到如下swagger文档已经生效 `Authorize`鉴权，在没有登录获取 token 时，接口都是未锁状态
 
-[](../assets/img/Fastapi使用OAuth2的Passowrd流配合JWT-token进行鉴权/001.png)
+![001](../assets/img/Fastapi使用OAuth2的Passowrd流配合JWT-token进行鉴权/001.png)
 
 2. 点击`Authorize`即调用端点 url `/token`接口，使用用户密码鉴权
 
-[](../assets/img/Fastapi使用OAuth2的Passowrd流配合JWT-token进行鉴权/002.png)
+![002](../assets/img/Fastapi使用OAuth2的Passowrd流配合JWT-token进行鉴权/002.png)
 
 3. 登录后，可以看到注入了`get_current_user`依赖项的接口`/user`上都已鉴权"上锁"
 
-[](../assets/img/Fastapi使用OAuth2的Passowrd流配合JWT-token进行鉴权/003.png)
+![003](../assets/img/Fastapi使用OAuth2的Passowrd流配合JWT-token进行鉴权/003.png)
 
 4. 此时请求`/user/getUserInfo/{id}`接口，请求头会带上 `Authorization`: `Bearer Token` 
 
-[](../assets/img/Fastapi使用OAuth2的Passowrd流配合JWT-token进行鉴权/004.png)
+![004](../assets/img/Fastapi使用OAuth2的Passowrd流配合JWT-token进行鉴权/004.png)
 
 
 ### 补充刷新`token`实现滑动过期时间的效果

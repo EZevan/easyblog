@@ -23,6 +23,7 @@
   * [sqlalchemy配置ORM模型基类](md/sqlalchemy配置ORM模型基类.md)
   * [sqlalchemy设置字段默认值 default/insert_fault/server_default 区别](md/sqlalchemy设置字段默认值default,insert_fault,server_default区别.md)
   * [sqlalchemy实体模型主键id使用uuid作为默认值只生成一次](md/sqlalchemy实体模型主键id使用uuid作为默认值只生成一次.md)
+  * [sqlalchemy连接数据库探活配置](md/sqlalchemy连接数据库探活配置.md)
 * 测试
   * [如何理解责任心](md/如何理解责任心.md)
   * [测试质量体系建设](md/测试质量体系建设.md)
